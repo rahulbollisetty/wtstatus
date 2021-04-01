@@ -3,9 +3,26 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate,logout 
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm 
-
+import requests
 def index(request):
-	return render(request,'index.html')
+    data = True
+    result = None
+    globalSummary = None
+    countries = None
+    while(data):
+        try:
+            result = requests.get('https://api.covid19api.com/summary')
+            json = result.json()
+
+            globalSummary = json['Global']
+            countries = json['Countries']
+
+            data = False
+        except:
+            data = True
+    return render(request , 'index.html' ,
+                  {'globalSummary' : globalSummary ,
+                   'countries' : countries})
 def register(request):
     if request.method == 'POST':
         form = NewUserForm(request.POST)

@@ -77,6 +77,9 @@ TEMPLATES = [
         },
     },
 ]
+# push local postgres db to heroku
+# PGUSER=postgres PGPASSWORD=rahul heroku pg:push postgres://localhost/mlh_lhd postgresql-cubic-53760 --app wtstatus
+
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-secondary',
         messages.INFO: 'alert-info',

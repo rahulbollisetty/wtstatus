@@ -1,4 +1,74 @@
 {% extends "layout.html" %}
 {% block content %}
+<br>
+    <h1 class="display-7">Covid 19 - Global Data </h1>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card col m-2 color1">
+                <div class="card-body">
+                    <h4 class="card-title">New Confirmed</h4>
+                    <p class="card-text number">{{globalSummary.NewConfirmed}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color2">
+                <div class="card-body">
+                    <h4 class="card-title">NewDeaths</h4>
+                    <p class="card-text number">{{globalSummary.NewDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color3">
+                <div class="card-body">
+                    <h4 class="card-title">Total Deaths</h4>
+                    <p class="card-text number">{{globalSummary.TotalDeaths}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color4">
+                <div class="card-body">
+                    <h4 class="card-title">New Recovered</h4>
+                    <p class="card-text number">{{globalSummary.NewRecovered}}</p>
+                </div>
+            </div>
+            <div class="card col m-2 color5">
+                <div class="card-body">
+                    <h4 class="card-title">Total Recovered</h4>
+                    <p class="card-text number">{{globalSummary.TotalRecovered}}</p>
+                </div>
+            </div>
 
+        </div>
+        <hr>
+
+        <h4 class="border rounded p-3">
+            <div class="display-8">
+                Country Wise Summary
+            </div>
+        </h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Country</th>
+                    <th>Total Confirmed</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in countries %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{c.Country}}</td>
+                    <td>{{c.TotalConfirmed}}</td>
+                    <td>{{c.TotalDeaths}}</td>
+                    <td>{{c.TotalRecovered}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+    </div>
 {% endblock %}

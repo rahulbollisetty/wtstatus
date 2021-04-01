@@ -15,3 +15,73 @@ padding: 5%;
 text-align: center;
 color: #fff;
 }
+.display-8 {
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.color1 {
+    background-color: #2475B0;
+    color: white;
+}
+
+.color2 {
+    background-color: #FF3E4D;
+    color: white;
+}
+
+.color3 {
+    background-color: #B83227;
+    color: white;
+}
+
+.color4 {
+    background-color: #2ecc72;
+    color: white;
+}
+
+.color5 {
+    background-color: #26ae60;
+    color: white;
+}
+
+.display-8 {
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.display-7 {
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.color1 {
+    background-color: #2475B0;
+    color: white;
+}
+
+.color2 {
+    background-color: #FF3E4D;
+    color: white;
+}
+
+.color3 {
+    background-color: #B83227;
+    color: white;
+}
+
+.color4 {
+    background-color: #2ecc72;
+    color: white;
+}
+
+.color5 {
+    background-color: #26ae60;
+    color: white;
+}
+
+.number {
+    font-weight: 300;
+    font-size: 40px;
+    float: right;
+}

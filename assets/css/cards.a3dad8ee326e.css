@@ -1,0 +1,58 @@
+#mb_3 {
+    color: #fff !important;
+}
+body {
+    color: #3b2b2b;
+    overflow-x: hidden;
+    height: 100%;
+
+    background-repeat: no-repeat
+}
+.row{
+    color: #fff;
+}
+.card {
+    width: 1000px;
+    background-color: #2c2b2a;
+}
+
+.block {
+    width: 15%;
+    background-color: #ffd885;
+    color: #252025;
+    cursor: pointer;
+    padding: 10px 0px;
+    margin-bottom : 10px;
+}
+.first-block {
+    border-bottom-left-radius: 5px
+}
+
+.last-block {
+    border-bottom-right-radius: 5px
+}
+
+.block.active,
+.block:hover {
+    background-color: #fdba63d2
+}
+
+.city-symbol {
+    width: 200px;
+    height: 250px
+}
+
+.large-font {
+    font-size: 60px
+}
+
+.symbol-img {
+    width: 40px;
+    height: 40px
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        width: 92%
+    }
+}
