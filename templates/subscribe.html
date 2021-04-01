@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %}Subscribe{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container py-5">
+	<form action="subs" method="POST">
+		{% csrf_token %}
+		{{ form.phone_no|as_crispy_field }}                    
+		<button class="btn btn-primary" type="submit">Add</button>
+	</form>
+</div>
+{% endblock %}

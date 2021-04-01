@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block title %}What's the weather like{% endblock %}
+{% block content0 %}
+{% load crispy_forms_tags %}         
+<section class='sec'>
+    <h1>What's the weather Like</h1>
+</section>
+{% endblock %}
+{% block content %}
+<div class="container py-5">
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.name|as_crispy_field }}                    
+		<button class="btn btn-primary" type="submit">Add</button>
+	</form>
+</div>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-offset-4 is-4">
+                {% for data in data_list %}
+                {% for city in city_list %}
+                {% if forloop.counter == forloop.parentloop.counter %}
+                <div class="container px-1 px-sm-4 py-5 mx-auto">
+                    <div class="row d-flex justify-content-center">
+                        <div class="card text-center pt-4 border-0">
+                            <h4 class="mb-0">{{city.name}}</h4> <small id = "mb_3" class="text-muted mb-3">{{city.country}}</small>
+                            <div class="row d-flex px-3 mt-auto">
+                                <hr>
+                                {% for k,v in data.items %}
+                                    <div class="d-flex flex-column block last-block"> <small class="text-muted mb-0">{{v.day}}</small>
+                                        <div class="text-center"><img class="symbol-img" src="http://openweathermap.org/img/wn/{{v.icon}}@2x.png"></div>
+                                        <h6><strong>{{v.temperature}}&#176;</strong></h6>
+                                        <h6><strong>High:&#176;</strong></h6>{{v.temperature_max}}
+                                        <h6><strong>Low: &#176;</strong></h6>{{v.temperature.min}}
+
+                                        {{v.description}}
+
+                                    </div>
+                                    <hr>
+                                   
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

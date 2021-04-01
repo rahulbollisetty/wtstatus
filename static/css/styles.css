@@ -1,0 +1,17 @@
+#bs{
+    float: left;
+    width: 50%;
+}
+#be{
+    float: right;
+    width: 50%;
+}
+.outer{
+    padding: 5%;
+}
+.sec {
+background-color: #121212;
+padding: 5%;
+text-align: center;
+color: #fff;
+}

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container px-1 px-sm-4 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="card text-center pt-4 border-0">
+            <h4 class="mb-0">Moscow</h4> <small class="text-muted mb-3">Red Square</small>
+            <h2 class="large-font">-32&#176;</h2>
+            <div class="text-center mt-3 mb-4"> <img class="city-symbol" src="https://i.imgur.com/QA63I0q.png"> </div>
+            <div class="row d-flex px-3 mt-auto">
+                <div class="d-flex flex-column block first-block"> <small class="text-muted mb-0">MON</small>
+                    <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/BeWfUuG.png"></div>
+                    <h6><strong>-30&#176;</strong></h6>
+                </div>
+                <div class="d-flex flex-column block"> <small class="text-muted mb-0">TUE</small>
+                    <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/Shrg84B.png"></div>
+                    <h6><strong>-29&#176;</strong></h6>
+                </div>
+                <div class="d-flex flex-column block active"> <small class="text-muted mb-0">WED</small>
+                    <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/Shrg84B.png"></div>
+                    <h6><strong>-34&#176;</strong></h6>
+                </div>
+                <div class="d-flex flex-column block"> <small class="text-muted mb-0">THU</small>
+                    <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/BeWfUuG.png"></div>
+                    <h6><strong>-30&#176;</strong></h6>
+                </div>
+                <div class="d-flex flex-column block last-block"> <small class="text-muted mb-0">FRI</small>
+                    <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/BeWfUuG.png"></div>
+                    <h6><strong>-30&#176;</strong></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

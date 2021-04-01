@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}         
+
+<!--Register--> 
+<div class="container py-5">
+	<h1 style="display: inline;">Register</h1>
+	<p class="text-center" style="display: inline;">(or)</p>
+	<h2 style="display: inline;"><a href="{% url 'social:begin' 'github' %}">Sign In with Github</a></h2>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form|crispy }}                    
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+
+</div>
+
+{% endblock %}
